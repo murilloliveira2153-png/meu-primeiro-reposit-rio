@@ -1,0 +1,41 @@
+algoritmo "Primeiro Programa"
+
+var
+li, ls, tentativas, palpite: inteiro
+resposta: caracter
+
+inicio
+// Seção de Comandos
+li <- 0
+ls <- 1000
+tentativas  <- 1
+repita
+palpite <- (ls - li)\2 + li
+escreval ("Seu número é maior, menor ou igual a ", palpite, "? " )
+leia(resposta)
+se resposta = ("Igual") entao
+escreval("ACERTEI!!!")
+senao 
+se resposta = ("Maior") entao
+li <- palpite
+senao
+se resposta = ("Menor") entao
+ls <- palpite
+senao
+escreva("resposta incorreta. ")
+escreva ("Escreva uma das palavras: Maior, Menor ou Igual")
+fimse
+fimse
+tentativas <- tentativas + 1
+fimse
+ate ((tentativas > 10) OU (resposta = "Igual"))
+se tentativas > 10 entao
+escreva ("Nâo consegui acertar...")
+senao
+escreva ("Tentativas: ", tentativas)
+fimse
+
+
+
+
+fimalgoritmo
